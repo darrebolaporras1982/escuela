@@ -38,4 +38,18 @@ class AlumnoController extends Controller
         $alumno->delete();
         return redirect()->route('alumnos.show')->with('eliminado', 'Alumno eliminado exitosamente');
     }
+    public function editform($id){
+        $alumno=Alumno::find($id);
+        return view('alumnos.alumnos_edit',compact('alumno'));
+    }
+    public function edit(Request $formulario, Alumno $alumno){
+        $alumno->nom_ape=$formulario->nombreApellidos;
+        $alumno->edad=$formulario->edad;
+        $alumno->direccion=$formulario->direccion;
+        $alumno->telefono=$formulario->telefono;
+        $alumno->save();
+        return redirect()->route('alumnos.show')->with('modificado', 'Alumno modificado exitosamente');
+
+
+    }
 }

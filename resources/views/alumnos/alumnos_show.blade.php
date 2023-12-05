@@ -2,7 +2,7 @@
 @section('title', 'Alumnos')
 @section('body')
 <div class="container justify-start">
-    <form action="{{ route('alumno.createform') }}" method="get">
+    <form action="{{ route('alumno.createform') }}" method="post">
         <button type="submit" class="btn btn-primary my-3">Crear Nuevo</button>
     </form>
 </div>
@@ -14,6 +14,11 @@
 @if(session('eliminado')){{-- Cuando se haya ELIMINADO el Alumno correctamente, redirigirá a esta pagina y mostrará el mensaje --}}
     <div class="alert alert-success text-center">
         {{ session('eliminado') }}
+    </div>
+@endif
+@if(session('modificado')){{-- Cuando se haya ELIMINADO el Alumno correctamente, redirigirá a esta pagina y mostrará el mensaje --}}
+    <div class="alert alert-success text-center">
+        {{ session('modificado') }}
     </div>
 @endif
 

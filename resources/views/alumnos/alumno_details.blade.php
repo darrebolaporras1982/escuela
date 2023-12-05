@@ -2,7 +2,7 @@
 @section('title', 'Datos Alumno')
 @section('body')
 <div class="container text-center justify-center ">
-    <h1 class="display-2 text-center justify-center m-5">Datos Individuales del Alumno {{ $alumno->nom_ape }}</h1>
+    <h1 class="display-2 text-center justify-center m-5">Datos Individuales del Alumno <span class="fw-bold" >{{ $alumno->nom_ape }}</span></h1>
     <table class="table table-striped ">
         <thead>
             <th class="display-4">Edad</th><th class="display-4 text-center">Dirección</th><th class="display-4 text-center">Telefono</th>
@@ -15,7 +15,7 @@
     </table>
 </div>
 <div class="container text-center">
-    <a class="btn btn-primary" href="">Editar Alumno</a>
+    <a class="btn btn-primary" href="{{ route('alumno.editInform',[$alumno->id]) }}">Editar Alumno</a>
     <a class="btn btn-danger" href="{{ route('alumno.confirm_delete',[$alumno->id]) }}">Eliminar Alumno</a>
 </div>
 @endsection
