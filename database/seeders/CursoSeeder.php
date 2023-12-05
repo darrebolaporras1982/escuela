@@ -17,5 +17,7 @@ class CursoSeeder extends Seeder
         $curso->nombre='HTML';
         $curso->nivel='Master';
         $curso->horas_academicas=50;
+        $curso->profesor_id=1;
+        $curso->save();
     }
 }

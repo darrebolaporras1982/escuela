@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
+use App\Models\Curso;
 class Profesor extends Model
 {
     use HasFactory;
@@ -19,4 +19,8 @@ class Profesor extends Model
     protected $hidden=[
         'id'                // pongo los atributos que estarán ocultos
     ];
+
+    public function curso(){
+        return $this->hasMany(Curso::class);//en el lado 1 se pone hasMany
+    }
 }
