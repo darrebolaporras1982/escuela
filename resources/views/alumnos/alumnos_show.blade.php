@@ -6,9 +6,14 @@
         <button type="submit" class="btn btn-primary my-3">Crear Nuevo</button>
     </form>
 </div>
-@if(session('success'))
+@if(session('creado')){{-- Cuando se haya CREADO el Alumno correctamente, redirigirá a esta pagina y mostrará el mensaje --}}
     <div class="alert alert-success text-center">
-        {{ session('success') }}
+        {{ session('creado') }}
+    </div>
+@endif
+@if(session('eliminado')){{-- Cuando se haya ELIMINADO el Alumno correctamente, redirigirá a esta pagina y mostrará el mensaje --}}
+    <div class="alert alert-success text-center">
+        {{ session('eliminado') }}
     </div>
 @endif
 

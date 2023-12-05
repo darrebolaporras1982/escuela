@@ -20,3 +20,5 @@ Route::get('/alumnos',[AlumnoController::class,'show'])->name('alumnos.show');
 Route::get('/alumnos/details/{id}',[AlumnoController::class,'details'])->name('alumno.details');
 Route::get('/alumnos/createform',[AlumnoController::class,'createform'])->name('alumno.createform');
 Route::get('/alumnos/create',[AlumnoController::class,'create'])->name('alumnos.create');
+Route::get('/alumnos/alumno_confirm_delete/{id}',[AlumnoController::class,'confirm'])->name('alumno.confirm_delete');
+Route::get('/alumnos/alumnos_show/{id}',[AlumnoController::class,'delete'])->name('alumno.delete');

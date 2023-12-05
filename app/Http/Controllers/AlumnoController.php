@@ -27,7 +27,15 @@ class AlumnoController extends Controller
         $alumno->telefono=$request->telefono;
         $alumno->save();
          // Redirige a la página principal después de guardar el alumno con un mensaje de éxito
-        return redirect()->route('alumnos.show')->with('success', 'Alumno creado exitosamente');
-    ;
+        return redirect()->route('alumnos.show')->with('creado', 'Alumno creado exitosamente');
+    }
+    public function confirm($id){
+        $alumno=Alumno::find($id);
+        return view('alumnos.alumno_confirm_delete',compact('alumno'));
+    }
+    public function delete($id){
+        $alumno=Alumno::find($id);
+        $alumno->delete();
+        return redirect()->route('alumnos.show')->with('eliminado', 'Alumno eliminado exitosamente');
     }
 }
