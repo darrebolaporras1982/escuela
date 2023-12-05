@@ -4,7 +4,7 @@ namespace Database\Seeders;
 use App\Models\Alumno;
 use App\Models\Profesor;
 use App\Models\Curso;
-
+use App\Models\AlumnoCurso;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
         Curso::factory(50)->create();//este llamará a la funcion de factory
         // \App\Models\User::factory(10)->create();
 
-        $this->call(AlumnoCursoSeeder::class);
+        //$this->call(AlumnoCursoSeeder::class);
+        AlumnoCurso::factory(50)->create();
     }
 }
