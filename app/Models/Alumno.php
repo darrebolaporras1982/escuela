@@ -21,7 +21,7 @@ class Alumno extends Model
         'id'
     ];
 
-    public function alumno(){
-        return $this->belongsToMany(Alumno::class);
+    public function curso(){
+        return $this->belongsToMany(Curso::class);
     }
 }
