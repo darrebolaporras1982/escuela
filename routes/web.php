@@ -18,3 +18,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[InitController::class,'init'])->name('inicio');
 Route::get('/alumnos',[AlumnoController::class,'show'])->name('alumnos.show');
 Route::get('/alumnos/details/{id}',[AlumnoController::class,'details'])->name('alumno.details');
+Route::get('/alumnos/createform',[AlumnoController::class,'createform'])->name('alumno.createform');
+Route::get('/alumnos/create',[AlumnoController::class,'create'])->name('alumnos.create');
