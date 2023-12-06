@@ -4,6 +4,8 @@
 <div class="container">
     <div class="display-5 text-center">Modifica Los datos del Alumno <span class="pw-bold">{{ $alumno->nom_ape }}</span></div>
     <form action="{{ route('alumno.edit',[$alumno]) }}" method="post">
+        @csrf
+        @method('put')
         <div class="mb-3">
             <label for="Nombre" class="form-label">Nombre y Apellidos</label>
             <input type="text" class="form-control" name="nombreApellidos" value="{{ $alumno->nom_ape }}">
@@ -21,8 +23,6 @@
             <input type="tel" class="form-control" name="telefono" value="{{ $alumno->telefono }}">
         </div>
         <button type="submit" class="btn btn-primary text-center items-center">Submit</button>
-        @csrf
-        @method('put')
     </form>
 </div>
 @endsection

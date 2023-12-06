@@ -13,7 +13,7 @@
                   <a class="nav-link" href="#">Cursos</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link disabled" href="#">Profesores</a>
+                  <a class="nav-link" href="{{ route('profesores.show') }}">Profesores</a>
                 </li>
               </ul>
 
