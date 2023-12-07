@@ -21,7 +21,7 @@ class CursoFactory extends Factory
             'nombre'=>$this->faker->sentence(),
             'nivel'=>$this->faker->randomElement(['Junior','Intermedio','Avanzado','Master']),
             'horas_academicas'=>$this->faker->numberBetween(1,500),
-            'profesor_id'=>$this->faker->numberBetween(1,10)
+            'profesor_id'=>$this->faker->numberBetween(1,50)
         ];
     }
 }
