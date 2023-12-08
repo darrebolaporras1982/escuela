@@ -15,4 +15,5 @@ class ProfesorController extends Controller
     }
     return view('profesores.profesores_show',compact('profesores'));// Puedes devolver los datos a una vista o de la forma que prefieras
     }
+   
 }

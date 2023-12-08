@@ -4,16 +4,8 @@ use App\Http\Controllers\AlumnoController;
 use App\Http\Controllers\InitController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfesorController;
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+use App\Http\Controllers\CursoController;
+
 // -------------------------------Alumno-------------------------------------------------
 Route::get('/',[InitController::class,'init'])->name('inicio');
 Route::get('/alumnos',[AlumnoController::class,'show'])->name('alumnos.show');
@@ -28,7 +20,5 @@ Route::put('/alumnos/alumno_edit/{alumno}',[AlumnoController::class,'edit'])->na
 // -------------------------------profesor------------------------------------------------
 Route::get('/profesores_show',[ProfesorController::class,'profesor_show'])->name('profesores.show');
 
-
-
-
 // -------------------------------Cursos-------------------------------------------------
+Route::get('/cursos_show',[CursoController::class,'cursos_show'])->name('cursos.show');

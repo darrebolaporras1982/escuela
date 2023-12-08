@@ -2,9 +2,7 @@
 @section('title', 'Alumnos')
 @section('body')
 <div class="container justify-start">
-    <form action="{{ route('alumno.createform') }}" method="post">
-        <button type="submit" class="btn btn-primary my-3">Crear Nuevo</button>
-    </form>
+        <a href="{{ route('alumno.createform') }}" class="btn btn-primary my-3">Crear Nuevo</a>
 </div>
 @if(session('creado')){{-- Cuando se haya CREADO el Alumno correctamente, redirigirá a esta pagina y mostrará el mensaje --}}
     <div class="alert alert-success text-center">

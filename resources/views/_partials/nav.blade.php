@@ -10,7 +10,7 @@
                   <a class="nav-link" href="{{ route('alumnos.show') }}">Alumnos</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Cursos</a>
+                  <a class="nav-link" href="{{ route('cursos.show') }}">Cursos</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="{{ route('profesores.show') }}">Profesores</a>
